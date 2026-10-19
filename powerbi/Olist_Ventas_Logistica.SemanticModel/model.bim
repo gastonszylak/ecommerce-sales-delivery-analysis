@@ -392,14 +392,14 @@
     ],
     "relationships": [
       {
-        "name": "d16bfe05-0f06-4536-be1f-e078e4ab51f8",
+        "name": "b5166b9c-fa17-4f15-a7a0-6fdab9558113",
         "fromTable": "order_items",
         "fromColumn": "order_id",
         "toTable": "orders",
         "toColumn": "order_id"
       },
       {
-        "name": "55140e41-03c5-49be-bda0-6c4805e71096",
+        "name": "a342f557-9eb6-453b-97a0-e7a8f58d7a70",
         "fromTable": "orders",
         "fromColumn": "order_date",
         "toTable": "Calendario",

@@ -34,7 +34,11 @@ La empresa creció **~50% interanual** en facturación, pero la logística no ac
 
 Dos páginas: **Ventas** (facturación, pedidos, ticket promedio, recompra, crecimiento MoM, categorías) y **Logística y satisfacción** (% de entregas tarde, días de entrega, nota promedio, detalle por estado). Se puede filtrar por estado.
 
-> 📁 `powerbi/` · ver [cómo abrirlo](#cómo-reproducirlo)
+![Tablero Power BI - Ventas](reports/figures/dashboard_ventas.png)
+
+![Tablero Power BI - Logística y satisfacción](reports/figures/dashboard_logistica.png)
+
+📥 **[Descargar el tablero (.pbix)](powerbi/Olist_Ventas_Logistica.pbix)**: se abre con Power BI Desktop y ya incluye los datos.
 
 **Modelo de datos (esquema estrella):** `orders` (hechos, 1 fila por pedido) ← `order_items` (ítems y categoría) · `Calendario` (tabla de fechas en DAX) · `_Medidas` (tabla de medidas).
 
@@ -123,7 +127,7 @@ Decisiones principales (detalle en [`reports/calidad_de_datos.md`](reports/calid
 ```
 ├── data/powerbi/         CSV que consume el tablero
 ├── notebooks/            Análisis exploratorio con conclusiones
-├── powerbi/              Proyecto Power BI (.pbip): modelo, medidas DAX y reporte
+├── powerbi/              Tablero (.pbix) y proyecto Power BI (.pbip): modelo, medidas DAX y reporte
 ├── reports/              Calidad de datos, resultados SQL y gráficos
 ├── sql/analysis.sql      Consultas de negocio
 └── src/
@@ -143,7 +147,7 @@ python src/export_powerbi.py   # CSV para Power BI
 jupyter notebook notebooks/analisis_exploratorio.ipynb
 ```
 
-**Power BI:** abrir `powerbi/Olist_Ventas_Logistica.pbip` con Power BI Desktop. Si la carpeta del proyecto está en otra ruta, actualizar el parámetro `CarpetaDatos` (Transformar datos → Administrar parámetros) para que apunte a `data/powerbi/` y luego **Actualizar**.
+**Power BI:** `powerbi/Olist_Ventas_Logistica.pbix` se abre directo con los datos incluidos. Para editar el proyecto en formato texto (control de versiones), abrir `powerbi/Olist_Ventas_Logistica.pbip` con Power BI Desktop. Si la carpeta del proyecto está en otra ruta, actualizar el parámetro `CarpetaDatos` (Transformar datos → Administrar parámetros) para que apunte a `data/powerbi/` y luego **Actualizar**.
 
 ---
 
