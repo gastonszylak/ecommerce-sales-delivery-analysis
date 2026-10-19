@@ -360,6 +360,12 @@
             "displayFolder": "Satisfacción"
           },
           {
+            "name": "Nota promedio entregados",
+            "expression": "CALCULATE(AVERAGE(orders[review_score]), orders[is_delivered] = 1)",
+            "formatString": "0.00",
+            "displayFolder": "Satisfacción"
+          },
+          {
             "name": "% Reseñas negativas",
             "expression": "DIVIDE(CALCULATE(COUNTROWS(orders), orders[review_score] <= 2), CALCULATE(COUNTROWS(orders), NOT ISBLANK(orders[review_score])))",
             "formatString": "0.0%;-0.0%;0.0%",
@@ -386,14 +392,14 @@
     ],
     "relationships": [
       {
-        "name": "0cc6dc3f-ee38-44dd-9370-d9e373283ba1",
+        "name": "d16bfe05-0f06-4536-be1f-e078e4ab51f8",
         "fromTable": "order_items",
         "fromColumn": "order_id",
         "toTable": "orders",
         "toColumn": "order_id"
       },
       {
-        "name": "6af4e31b-2cbe-4fa3-b6d4-523e5da6b18b",
+        "name": "55140e41-03c5-49be-bda0-6c4805e71096",
         "fromTable": "orders",
         "fromColumn": "order_date",
         "toTable": "Calendario",
